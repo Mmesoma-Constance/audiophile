@@ -13,6 +13,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Confirmation from "./pages/Confirmation";
 import NotFound from "./pages/NotFound";
+import About from "./components/About";
 
 const queryClient = new QueryClient();
 
@@ -32,10 +33,14 @@ const App = () => (
                 <Route path="/product/:slug" element={<ProductDetail />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/confirmation/:orderId" element={<Confirmation />} />
+                <Route
+                  path="/confirmation/:orderId"
+                  element={<Confirmation />}
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
+            <About />
             <Footer />
           </div>
         </BrowserRouter>

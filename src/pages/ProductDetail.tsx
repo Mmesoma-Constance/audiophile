@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Minus, Plus } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import CategoryCard from '@/components/CategoryCard';
-import { products } from '@/data/products';
-import { useCart } from '@/contexts/CartContext';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { ChevronLeft, Minus, Plus } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import CategoryCard from "@/components/CategoryCard";
+import { products } from "@/data/products";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "sonner";
 
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -35,9 +35,9 @@ const ProductDetail = () => {
   };
 
   const categories = [
-    { name: 'Headphones', slug: 'headphones' },
-    { name: 'Speakers', slug: 'speakers' },
-    { name: 'Earphones', slug: 'earphones' },
+    { name: "Headphones", slug: "headphones" },
+    { name: "Speakers", slug: "speakers" },
+    { name: "Earphones", slug: "earphones" },
   ];
 
   return (
@@ -51,10 +51,10 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Details */}
-      <section className="container mx-auto px-4 md:px-6 pb-20">
+      <section className="container mx-auto px-4 sm:px-16 md:px-32 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-20">
           {/* Image */}
-          <div className="relative overflow-hidden rounded-lg bg-muted">
+          <div className="relative overflow-hidden rounded-lg bg-muted justify-between m-auto">
             <img
               src={product.image}
               alt={product.name}
@@ -65,15 +65,19 @@ const ProductDetail = () => {
           {/* Content */}
           <div className="space-y-6">
             {product.new && (
-              <Badge className="bg-transparent border-primary text-primary uppercase tracking-wider">
+              <Badge className="text-primary uppercase tracking-widest ">
                 New Product
               </Badge>
             )}
             <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-wider">
               {product.name}
             </h1>
-            <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-            <p className="text-2xl font-bold">${product.price.toLocaleString()}</p>
+            <p className="text-muted-foreground leading-relaxed">
+              {product.description}
+            </p>
+            <p className="text-2xl font-bold">
+              ${product.price.toLocaleString()}
+            </p>
 
             {/* Quantity & Add to Cart */}
             <div className="flex gap-4">
@@ -96,7 +100,7 @@ const ProductDetail = () => {
                   <Plus className="h-4 w-4" />
                 </Button>
               </div>
-              <Button size="lg" onClick={handleAddToCart} className="flex-1">
+              <Button size="lg" onClick={handleAddToCart} className="">
                 Add to Cart
               </Button>
             </div>
@@ -104,21 +108,25 @@ const ProductDetail = () => {
         </div>
 
         {/* Features & Includes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 mb-20">
           <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">Features</h2>
+            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">
+              Features
+            </h2>
             <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
               {product.features}
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:flex md:gap-80 xl:block xl:gap-0">
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider">
               In the Box
             </h2>
             <ul className="space-y-2">
               {product.includes.map((item, index) => (
                 <li key={index} className="flex gap-4">
-                  <span className="text-primary font-bold">{item.quantity}x</span>
+                  <span className="text-primary font-bold">
+                    {item.quantity}x
+                  </span>
                   <span className="text-muted-foreground">{item.item}</span>
                 </li>
               ))}

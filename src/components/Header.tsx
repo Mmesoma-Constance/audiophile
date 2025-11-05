@@ -17,8 +17,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-black/95 border-b border-white/10">
-      <div className="container mx-auto px-4 md:px-32">
+    <header className="bg-[hsl(var(--dark-bg))] border-b border-white/10">
+      <div className="container mx-auto px-8 lg:12 xl:px-32">
         <div className="flex h-24 items-center justify-between">
           {/* Mobile Menu */}
           <Sheet>
@@ -69,11 +69,11 @@ const Header = () => {
             >
               <ShoppingCart className="h-6 w-6" />
             </Button>
-            {cartCount > 0 && (
+            {/* {cartCount > 0 && (
               <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs">
                 {cartCount}
               </Badge>
-            )}
+            )} */}
           </Link>
         </div>
       </div>
