@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between mt-3 lg:mt-12 lg:pt-8 text-white/60 text-center md:text-start">
+        <div className="flex flex-col md:flex-row items-center justify-between mt-3 lg:mt-12 lg:pt-8 text-white/60 text-center md:text-start">
           <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
           <div className="flex lg:hidden gap-4 justify-center md:justify-end">
             <a

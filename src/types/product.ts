@@ -8,6 +8,8 @@ export interface Product {
   description: string;
   features: string;
   includes: { quantity: number; item: string }[];
+  gallery?: string[];
+
   new?: boolean;
 }
 

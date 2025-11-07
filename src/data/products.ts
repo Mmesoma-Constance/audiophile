@@ -1,9 +1,13 @@
 import { Product } from "@/types/product";
-import productXX99Mark2 from "@/assets/product-xx99-mark-two.jpg";
-import productZX9Speaker from "@/assets/images/desktop/hero-1.png";
-import speaker1 from "@/assets/images/desktop/hero-1.png";
-import earphone1 from "@/assets/images/desktop/image-gallery-2.jpg";
-import productYX1Earphones from "@/assets/product-yx1-earphones.jpg";
+import productXX99Mark1 from "@/assets/images/desktop/image-xx99-mark-two-headphones.jpg";
+import productXX99Mark2 from "@/assets/images/desktop/image-xx99-mark-one-headphones.jpg";
+import productXX99Mark3 from "@/assets/images/desktop/image-xx59-headphones.jpg";
+import productZX9Speaker1 from "@/assets/images/desktop/image-zx9-speaker.jpg";
+import productZX9Speaker2 from "@/assets/images/desktop/image-zx7-speaker.jpg";
+import productYX1Earphones from "@/assets/images/desktop/hero-3.png";
+import gallery1 from "@/assets/images/desktop/image-xx99-mark-one-headphones.jpg";
+import gallery2 from "@/assets/images/desktop/image-xx59-headphones.jpg";
+import gallery3 from "@/assets/images/desktop/image-zx9-speaker.jpg";
 
 export const products: Product[] = [
   {
@@ -12,7 +16,7 @@ export const products: Product[] = [
     name: "XX99 Mark II Headphones",
     category: "headphones",
     price: 2999,
-    image: productXX99Mark2,
+    image: productXX99Mark1,
     new: true,
     description:
       "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -25,6 +29,7 @@ export const products: Product[] = [
       { quantity: 1, item: "3.5mm 5m audio cable" },
       { quantity: 1, item: "Travel bag" },
     ],
+    gallery: [gallery1, gallery2, gallery3],
   },
   {
     id: "2",
@@ -43,6 +48,7 @@ export const products: Product[] = [
       { quantity: 1, item: "User manual" },
       { quantity: 1, item: "3.5mm 5m audio cable" },
     ],
+    gallery: [gallery2, gallery3, gallery1],
   },
   {
     id: "3",
@@ -50,7 +56,7 @@ export const products: Product[] = [
     name: "XX59 Headphones",
     category: "headphones",
     price: 899,
-    image: productXX99Mark2,
+    image: productXX99Mark3,
     description:
       "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
     features:
@@ -61,6 +67,7 @@ export const products: Product[] = [
       { quantity: 1, item: "User manual" },
       { quantity: 1, item: "3.5mm 5m audio cable" },
     ],
+    gallery: [gallery3, gallery1, gallery2],
   },
   {
     id: "4",
@@ -68,7 +75,7 @@ export const products: Product[] = [
     name: "ZX9 Speaker",
     category: "speakers",
     price: 4500,
-    image: speaker1,
+    image: productZX9Speaker1,
     new: true,
     description:
       "Upgrade your sound system with the all new ZX9 active speaker. Its a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -81,14 +88,15 @@ export const products: Product[] = [
       { quantity: 1, item: "3.5mm 10m audio cable" },
       { quantity: 1, item: "10m optical cable" },
     ],
+    gallery: [gallery1, gallery3, gallery2],
   },
   {
     id: "5",
-    slug: "zx7-speaker",
-    name: "ZX7 Speaker",
+    slug: "zx9-speaker",
+    name: "ZX9 Speaker",
     category: "speakers",
     price: 3500,
-    image: productZX9Speaker,
+    image: productZX9Speaker2,
     description:
       "Stream high-fidelity sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
     features:
@@ -100,14 +108,15 @@ export const products: Product[] = [
       { quantity: 1, item: "3.5mm 7.5m audio cable" },
       { quantity: 1, item: "7.5m optical cable" },
     ],
+    gallery: [gallery2, gallery1, gallery3],
   },
   {
     id: "6",
     slug: "yx1-earphones",
-    name: "YX1 Earphones",
+    name: "YX1 Wireless Earphones",
     category: "earphones",
     price: 599,
-    image: earphone1,
+    image: productYX1Earphones,
     new: true,
     description:
       "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
@@ -120,5 +129,6 @@ export const products: Product[] = [
       { quantity: 1, item: "USB-C charging cable" },
       { quantity: 1, item: "Travel pouch" },
     ],
+    gallery: [gallery3, gallery2, gallery1],
   },
 ];
